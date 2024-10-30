@@ -1,3 +1,4 @@
+import React from 'react'; // Import React to use JSX
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import OptionPage from './main_src/home_page/option_page';
