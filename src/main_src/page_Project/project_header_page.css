@@ -1,0 +1,133 @@
+.Project_main_container {
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: flex-end; /* Align content to the bottom */
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f0; /* Example background color, change as needed */
+  background-color: #f0f0f0; /* Example background color, change as needed */
+  background: radial-gradient(50% 50% at 50% 50%, #F5BF2B 72%, #FFAE18 100%);
+}
+
+.left_container {
+  display: grid;
+  grid-template-columns: 40% 60%; /* 40% for the left sidebar, 60% for the main content */
+  width: 68%; /* 68% width */
+  height: 70%; /* 70% height */
+  background-color: #ffffff; /* Example background color, change as needed */
+  gap: 0px; /* Gap between grid items */
+  border-top-left-radius: 20px;
+}
+
+.left_sidebar {
+  grid-column: 1 / 2; /* Span across the first column */
+  grid-row: 1 / 2; /* Span across the first row */
+  height: 90%; /* 90% height */
+  width: 70%; /* 70% width */
+  margin: auto; /* Center the sidebar vertically and horizontally */
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #ffffff; /* Black background for the sidebar */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column; /* Display items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 30px;
+}
+/* .Project_Headercom{
+  position: relative;
+} */
+
+.optionimageproject {
+  width: 90%; /* Example width, adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20%; /* Space between items */
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.optionimageproject:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.center_content {
+  grid-column: 2 / 3; /* Span across the second column */
+  grid-row: 1 / 2; /* Span across the first row */
+  position: relative; /* Required for absolute positioning of child elements */
+  display: flex;
+  justify-content: center; /* Center horizontally within the grid item */
+  align-items: center; /* Center vertically within the grid item */
+  height: 80%; /* 80% height */
+  width: 100%; /* 100% width */
+  background-color: #000000; /* Example background color, change as needed */
+  margin: auto; /* Center the content vertically and horizontally */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.optionimageproject_center_content {
+  position: absolute;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  width: 90%; /* Example width, adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px;
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.optionimageproject_center_content:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+  .Project_main_container {
+    justify-content: center; /* Center horizontally on smaller screens */
+    align-items: center; /* Center vertically on smaller screens */
+  }
+
+  .left_container {
+    margin-top: -20px;
+    width: 70%; /* Adjust width for smaller screens */
+    height: 70%; /* Adjust height for smaller screens */
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    grid-template-rows: 30% 70%; /* 30% for the top sidebar, 70% for the main content */
+    gap: 0px; /* Reduced gap between grid items */
+    border-radius: 10px;
+  }
+
+  .left_sidebar {
+    grid-row: 1 / 2; /* Span across the first row */
+    grid-column: 1 / 2; /* Span across the first column */
+    width: 70%; /* 80% width */
+    height: 50%; /* 80% height */
+    padding: 0px;
+    border-radius: 5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1); /* Shadow effect */
+
+  }
+  .optionimageproject {
+    width: 100%; /* Example width, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    background-color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+  }
+
+  .center_content {
+    grid-row: 2 / 3; /* Span across the second row */
+    grid-column: 1 / 2; /* Span across the first column */
+    width: 70%; /* 80% width */
+    height: 90%; /* 90% height */
+    padding: 10px;
+    border-radius: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+  }
+}
