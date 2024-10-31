@@ -8,7 +8,6 @@
     align-items: flex-start;
 }
 
-
 .center-container {
     background-color: black;
     color: white;
@@ -22,9 +21,25 @@
     text-align: center;
     font-size: 24px;
     z-index: 1; /* Ensure it's above the lines */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
 }
 
-.title {
+.resume-svg {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align at the top */
+    margin: 20px 0; /* Add some margin for spacing */
+    width: 100%; /* Make the SVG take the full width */
+}
+
+.resume-svg svg {
+    width: 80%; /* Adjust this value to make the SVG larger or smaller */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.title-Resume-font {
     position: absolute;
     top: 10%; /* Adjust this value for vertical position */
     left: 50%;
@@ -52,6 +67,22 @@
     right: calc(48% - 32%); /* Position on the right side */
 }
 
+.left-text, .right-text {
+    position: absolute;
+    top: 25%; /* Position vertically */
+    transform: rotate(-90deg); /* Rotate text for vertical alignment */
+    font-size: 20px; /* Adjust font size as needed */
+    font-family: Georgia, serif;
+    color: black; /* Text color */
+}
+
+.left-text {
+    left: calc(48% - 32% - 30px); /* Adjust the left text position */
+}
+
+.right-text {
+    right: calc(48% - 32% - 30px); /* Adjust the right text position */
+}
 
 .download-resume {
     position: absolute;
@@ -78,9 +109,12 @@
 .download-resume:hover {
     color: black; /* Text remains black on hover */
 }
-.resume-svg {
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: 20px 0; /* Add some margin for spacing */
+
+  
+.float-svg {
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Adjust vertical position */
+    left: 0px; /* Adjust horizontal position */
+    z-index: 2; /* Ensure it's above other elements */
 }
+  

@@ -1,7 +1,8 @@
 import React from 'react';
 import './pageresume.css';
 import Headercom from '../components/header';
-import { ReactComponent as ResumeSVG } from '../images/Resumesvg.svg'; // Ensure the correct import path
+import { ReactComponent as ResumeSVG } from '../images/Resumesvg.svg'; // Your main resume SVG
+import { ReactComponent as ResumeContactSVG } from '../images/resumecontact.svg'; // Import your new SVG
 
 const Resume = () => {
   return (
@@ -13,11 +14,16 @@ const Resume = () => {
         <div className="line right"></div>
 
         {/* Title above the center container */}
-        <div className="title">Resume</div>
+        <div className="title-Resume-font">Resume</div>
+
+        {/* Floating SVG for resume contact */}
+        <div className="float-svg">
+          <ResumeContactSVG />
+        </div>
 
         <div className="center-container">
           <div className="resume-svg">
-            <ResumeSVG /> {/* Render the SVG here */}
+            <ResumeSVG /> {/* Render the main resume SVG */}
           </div>
         </div>
 
@@ -26,8 +32,6 @@ const Resume = () => {
           <span className="underline"></span> {/* Separate underline */}
         </div>
       </div>
-
-      
     </>
   );
 };
